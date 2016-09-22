@@ -1,0 +1,94 @@
+
+.list-levels
+	
+	display: block
+	font-size: 0
+	
+
+	li
+		width: 30.6666%
+		margin: 0 2% 2% 2%
+		display: inline-block
+		font-size: 13px
+		position: relative
+		vertical-align: top
+		
+		&:first-child,
+		&:nth-child(3n+1)
+			margin-left: 0
+			
+		&:nth-child(3n+3)
+			margin-right: 0
+
+		a
+			display: block
+			position: relative
+			text-align: left
+
+			.title
+				width: 160px
+				margin-left: -80px
+				margin-bottom: -20px
+				padding: 10px 10px
+				display: block
+				font-size: 16px
+				text-align: center
+				position: absolute
+				left: 50%
+				bottom: 50%
+				z-index: 1
+				transition: unquote($settings.transition)
+				background-color: alpha($colors.primary, 0.80)
+				
+
+			&:hover
+				&:before
+					opacity: 0.0
+					
+				.title
+					margin-left: -90px
+					width: 180px
+					// background-color: alpha($colors.white, 0.25)
+					
+
+		& > .title
+		.caption
+			color: $colors.white
+								
+		.caption
+			display: block
+			padding: 5px 10px
+			font-size: 14px
+			text-align: left
+			
+
+
+	.level-image
+		width: 100%
+		max-width: 160px
+		margin: 0 5px 5px 0
+		display: block
+		float: left
+		border: 2px solid $colors.blue
+		
+
+	.level-info
+		float: left
+	
+	.level-title		
+	.level-statistics
+	.level-votes
+	.level-author
+		display: block
+		
+
+	.level-title
+		margin: 0 0 5px 0
+		font-size: 15px
+		
+	.level-votes-up
+		color: $colors.green
+		
+	.level-votes-down
+		color: $colors.orange
+		

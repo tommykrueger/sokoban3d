@@ -1,0 +1,44 @@
+
+.list
+	width: 100%
+	display: block
+	
+	&:after
+		content: ''
+		display: block
+		clear: both
+	
+	ul
+		display: block
+		
+		&:after
+			content: ''
+			display: block
+			clear: both
+		
+		li
+			width: 23.5%
+			margin: 0 1% 1.5% 1%
+			float: left
+			
+			&:first-child,
+			&:nth-child(4n+1)
+				margin-left: 0
+				
+			&:nth-child(4n+4)
+				margin-right: 0
+				
+
+				
+
+	// news-list				
+
+	&.news-list
+		
+		.headline
+			margin-bottom: 10px
+			
+		.headline, p
+			margin-left: 70px
+				
+			

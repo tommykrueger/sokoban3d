@@ -1,0 +1,111 @@
+
+.menu 
+	margin: 0
+	padding: 0
+	display: block
+	border-bottom: 1px solid alpha($colors.white, 15%)
+
+	li
+		display: block
+		position: relative
+		transition: all 150ms ease-in-out
+
+		a 
+			padding: 8px 8px 8px 32px
+			display: block
+			color: lighten($colors.lightGrey, 25%)
+			
+			&:hover
+				text-decoration: none
+				
+
+
+
+	&.mainmenu
+		float: right
+		
+		ul 
+			
+			& > li
+				float: left
+				
+				& > a
+					margin: 0 10px
+					padding: 0 15px
+					display: block
+					color: $colorPreset.dark
+					font-size: 13px
+					line-height: 42px
+					text-transform: uppercase
+					transition: unquote($settings.transition)
+					
+				&:last-child
+					& > a
+						margin-right: 0
+					
+					
+				&:hover a
+				&.active a
+					
+					color: $colors.orange
+					text-decoration: none
+					
+
+
+
+
+	&.footermenu
+		width: 100%
+		margin: 0 0 5px 0
+		display: inline-block
+		color: $colors.white
+		font-family: 'Karla', sans-serif
+		border: 0
+		
+		li
+			display: inline-block
+
+			a
+				padding: 0 6px
+
+
+		&.with-separator
+			li
+				font-size: 10px
+				
+				a
+					display: inline-block
+
+				&:before
+					content: ' | '
+					display: inline-block
+					
+				&:first-child
+					&:before
+						content: ''
+					
+
+		&.primary
+			li
+				a
+					color: $colors.white
+					font-weight: 100
+					font-size: 14px
+					text-transform: uppercase
+					
+
+		&.secondary
+			color: darken($colors.white, 30%)
+			li
+				a
+					color: darken($colors.white, 30%)
+					font-weight: 100
+					font-weight: 100
+					font-size: 10px
+					text-transform: uppercase
+					&:hover
+						color: $colors.white
+			
+			
+				
+		

@@ -1,0 +1,87 @@
+$options = {
+	
+	width: 1200,
+	grid: 12,
+	
+	size: {
+		xs: 480px,
+		sm: 768px,
+		md: 992px,
+		lg: 1296px
+	}
+	
+}
+
+
+.container
+	width: 100%
+	margin: 0 auto
+	clear: both
+	// overflow: hidden
+		
+	&:after
+		content: ''
+		height: 0
+		clear: both
+		float: none
+		display: block
+	
+	&.large
+		max-width: $options.size.lg
+		
+	&.medium
+		max-width: $options.size.md
+		
+	&.small
+		max-width: $options.size.sm
+		
+	&.extrasmall
+		max-width: $options.size.xs
+	
+	@media screen and (max-width: $options.size.xs)
+		max-width: $options.size.xs
+	@media screen and (max-width: $options.size.sm)
+		max-width: $options.size.sm
+	@media screen and (max-width: $options.size.md)
+		max-width: $options.size.md
+	@media screen and (max-width: $options.size.lg)
+		max-width: $options.size.lg
+		
+.column
+	display: block
+	float: left
+	
+	&.column-with-margin
+		margin: 0 24px 24px 0
+		
+	&:last-child
+		margin-right: 0
+
+@media screen and (min-width: $options.size.sm) and (max-width: $options.size.md)
+	
+	for num in (1..$options.grid)
+		.small-{num}
+			width: ((num / $options.grid) * 100) %
+			
+
+@media screen and (min-width: $options.size.md) and (max-width: $options.size.lg)
+	
+	for num in (1..$options.grid)
+		.medium-{num}
+			width: ((num / $options.grid) * 100) %
+			
+
+@media screen and (min-width: $options.size.lg)
+	
+	for num in (1..$options.grid)
+		.large-{num}
+			width: ((num / $options.grid) * 100) %
+			
+			&.column-with-margin
+				width: (((num / $options.grid) * 100) - 2) %
+				margin-right: 2%
+				
+			&:last-child
+				width: ((num / $options.grid) * 100) %
+				margin-right: 0
+
