@@ -1,0 +1,92 @@
+@import 'nib' 
+
+.button
+.btn
+
+	width: auto
+	padding: 4px 8px
+	display: inline-block
+	text-align: center
+
+	cursor: pointer
+	color: $colors.black
+	font-size: 13px
+
+	text-align: center
+	text-decoration: none
+	position: relative
+
+	border-width: 1px
+	border-style: solid
+	border-color: $colors.black
+	border-radius: 3px
+
+	box-shadow: 0 0 5px alpha($colors.black, 10%)
+	background: linear-gradient(top, $colors.white, darken($colors.white, 7.5%))
+
+	transition: all 150ms ease-in-out
+
+
+	&.featured
+		border-color: darken($colors.primary, 15%)
+		background: linear-gradient(top, $colors.primary, darken($colors.primary, 15%))
+
+
+	&.inverse
+		color: $colors.white
+
+
+	&.large
+		padding: 16px 32px
+		font-size: 16px
+
+
+	&.highlight
+		margin: 0 auto
+		color: darken($colors.orange, 75%)
+		border-radius: 2px
+		border-color: darken($colors.orange, 15%)
+		background: linear-gradient(top, $colors.orange, darken($colors.orange, 15%))
+
+		&:hover
+			background: linear-gradient(top, lighten($colors.orange, 10%), darken($colors.orange, 5%))
+
+
+	&:hover, &.active
+		box-shadow: 0 0 5px alpha($colors.black, 15%)
+		background: linear-gradient(top, $colors.primary, darken($colors.primary, 10%))
+		text-decoration: none
+
+		& > a
+			color: $colors.white
+			text-decoration: none
+
+
+
+
+
+
+	// Special buttons
+
+
+
+	// login buttons
+
+	&-login
+
+		background: transparent
+		border-width: 0
+		box-shadow: none
+
+		&:hover
+			color: $colors.white !important
+			background: $colorPreset.auth
+
+	&-play
+
+		color: $colors.white !important
+		background: $colorPreset.play
+		border-width: 0
+
+		&:hover
+			animation: pulse 550ms infinite
